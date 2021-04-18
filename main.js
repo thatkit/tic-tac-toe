@@ -68,47 +68,28 @@ let rightBotVal = 0;
 
 const arrBoxVals = [leftTopVal, leftMidVal, leftBotVal, centerTopVal, centerMidVal, centerBotVal, rightTopVal, rightMidVal, rightBotVal];
 
-//Winning combinations
+//Winning combinations variables
 
-let leftCol = leftTopVal + leftMidVal + leftBotVal;
-let centerCol = centerTopVal + centerMidVal + centerBotVal;
-let rightCol = rightTopVal + rightMidVal + rightBotVal;
-let topRow = leftTopVal + centerTopVal + rightTopVal;
-let midRow = leftMidVal + centerMidVal + rightMidVal;
-let botRow = leftBotVal + centerBotVal + rightBotVal;
-let ltrb = leftTopVal + centerMidVal + rightBotVal;
-let rtlb = rightTopVal + centerMidVal + leftBotVal;
+let leftCol;
+let centerCol;
+let rightCol;
+let topRow;
+let midRow;
+let botRow;
+let ltrb;
+let rtlb;
 
-//Checks who the winner is and whether the game is over
+//Updates winning combinations
 
-let whoWon = '';
-
-const computerWon = () => {
-    switch (-3) {
-        case leftCol:
-        case centerCol:
-        case rightCol:
-        case topRow:
-        case midRow:
-        case botRow:
-        case ltrb:
-        case rtlb:
-            whoWon = 'computer';
-    }
-}
-
-const humanWon = () => {
-    switch (3) {
-        case leftCol:
-        case centerCol:
-        case rightCol:
-        case topRow:
-        case midRow:
-        case botRow:
-        case ltrb:
-        case rtlb:
-            whoWon = 'human';
-    }
+const updateWinCombs = () => {
+    leftCol = arrBoxVals[0] + arrBoxVals[1] + arrBoxVals[2];
+    centerCol = arrBoxVals[3] + arrBoxVals[4] + arrBoxVals[5];
+    rightCol = arrBoxVals[6] + arrBoxVals[7] + arrBoxVals[8];
+    topRow = arrBoxVals[0] + arrBoxVals[3] + arrBoxVals[6];
+    midRow = arrBoxVals[1] + arrBoxVals[4] + arrBoxVals[7];
+    botRow = arrBoxVals[2] + arrBoxVals[5] + arrBoxVals[8];
+    ltrb = arrBoxVals[0] + arrBoxVals[4] + arrBoxVals[8];
+    rtlb = arrBoxVals[6] + arrBoxVals[4] + arrBoxVals[2];
 }
 
 //Counts which turn it is
@@ -126,7 +107,9 @@ User-end interactions
 const markX = val => val.innerHTML = `<p class='marked-x'>${x}</p>`;
 const markO = val => val.innerHTML = `<p class='marked-o'>${o}</p>`;
 
-//Computer marking boxes
+//Computer marks boxes, updates the winning combinations, increments round number
+
+let whoWon = '';
 
 const compMarks = () => {
     let markVal = -1;
@@ -140,13 +123,42 @@ const compMarks = () => {
         markX(arrBoxRefs[arrInd]);
     }
 
+    updateWinCombs();
+
+    switch (-3) {
+        case leftCol:
+        case centerCol:
+        case rightCol:
+        case topRow:
+        case midRow:
+        case botRow:
+        case ltrb:
+        case rtlb:
+            whoWon = 'computer';
+    }
+
     turnCountIncrements();
 }
 
 
+//Checks who the winner is and whether the game is over
 
+const humanWon = () => {
+    switch (3) {
+        case leftCol:
+        case centerCol:
+        case rightCol:
+        case topRow:
+        case midRow:
+        case botRow:
+        case ltrb:
+        case rtlb:
+            whoWon = 'human';
+    }
+}
 
 
 
 //Tests (console output)
 console.log(whoStarts);
+
