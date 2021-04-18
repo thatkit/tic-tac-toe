@@ -19,3 +19,9 @@ const o = 'O';
 
 // User-end interactions
 
+const markX = val => val.innerHTML = `<p class='marked-x'>${x}</p>`;
+const markO = val => val.innerHTML = `<p class='marked-o'>${o}</p>`;
+
+leftTop.onclick = () => {
+    markX(leftTop);
+}
