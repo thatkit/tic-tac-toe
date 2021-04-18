@@ -95,7 +95,7 @@ const computerWon = () => {
     }
 }
 
-const computerWon = () => {
+const humanWon = () => {
     switch (3) {
         case leftCol:
         case centerCol:
