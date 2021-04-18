@@ -17,6 +17,11 @@ const rightBot = document.querySelector('.right.bot');
 const x = 'X';
 const o = 'O';
 
+// Storing first player button references in vars
+
+const computer = document.getElementById('firstCom');
+const human = document.getElementById('firstHum');
+
 // User-end interactions
 
 const markX = val => val.innerHTML = `<p class='marked-x'>${x}</p>`;
