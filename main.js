@@ -22,6 +22,13 @@ const o = 'O';
 const computer = document.getElementById('firstCom');
 const human = document.getElementById('firstHum');
 
+//Decides who starts the game (computer or human)
+
+let whoStarts = '';
+
+computer.onclick = () => whoStarts = 'computer';
+human.onclick = () => whoStarts = 'human';
+
 // User-end interactions
 
 const markX = val => val.innerHTML = `<p class='marked-x'>${x}</p>`;
