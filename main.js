@@ -50,16 +50,6 @@ human.onclick = () => {
     showTheGameField();
 }
 
-// User-end interactions
-
-const markX = val => val.innerHTML = `<p class='marked-x'>${x}</p>`;
-const markO = val => val.innerHTML = `<p class='marked-o'>${o}</p>`;
-
-leftTop.onclick = () => {
-    markX(leftTop);
-}
-
-
 /*
 Game mechanics
 */
@@ -117,4 +107,23 @@ const computerWon = () => {
         case rtlb:
             whoWon = 'human';
     }
+}
+
+//Counts which turn it is
+
+let turnCount = 0;
+
+const turnCountIncrements = () => turnCount++;
+
+/*
+User-end interactions
+*/
+
+//Marking X or O
+
+const markX = val => val.innerHTML = `<p class='marked-x'>${x}</p>`;
+const markO = val => val.innerHTML = `<p class='marked-o'>${o}</p>`;
+
+leftTop.onclick = () => {
+    markX(leftTop);
 }
