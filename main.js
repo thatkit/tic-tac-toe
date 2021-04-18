@@ -22,12 +22,25 @@ const o = 'O';
 const computer = document.getElementById('firstCom');
 const human = document.getElementById('firstHum');
 
-//Decides who starts the game (computer or human)
+//Decides who starts the game (computer or human) and displays the result on the screen
 
 let whoStarts = '';
 
-computer.onclick = () => whoStarts = 'computer';
-human.onclick = () => whoStarts = 'human';
+const hideWhoStartsOptions = () => {
+    computer.style.display = 'none';
+    human.style.display = 'none';
+    document.getElementById('who-starts').textContent = `${whoStarts} starts the game!`;
+}
+
+computer.onclick = () => {
+    whoStarts = 'computer';
+    hideWhoStartsOptions();
+}
+
+human.onclick = () => {
+    whoStarts = 'human';
+    hideWhoStartsOptions();
+}
 
 // User-end interactions
 
