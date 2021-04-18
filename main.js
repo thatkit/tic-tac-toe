@@ -1,3 +1,7 @@
+/*
+1. Pre-game settings
+*/
+
 // Storing references to game boxes in vars
 
 const leftTop = document.querySelector('.left.top');
@@ -53,4 +57,64 @@ const markO = val => val.innerHTML = `<p class='marked-o'>${o}</p>`;
 
 leftTop.onclick = () => {
     markX(leftTop);
+}
+
+
+/*
+Game mechanics
+*/
+
+//Variables (containers) for boxes
+
+let leftTopVal = 0;
+let leftMidVal = 0;
+let leftBotVal = 0;
+let centerTopVal = 0;
+let centerMidVal = 0;
+let centerBotVal = 0;
+let rightTopVal = 0;
+let rightMidVal = 0;
+let rightBotVal = 0;
+
+//Winning combinations
+
+let leftCol = leftTopVal + leftMidVal + leftBotVal;
+let centerCol = centerTopVal + centerMidVal + centerBotVal;
+let rightCol = rightTopVal + rightMidVal + rightBotVal;
+let topRow = leftTopVal + centerTopVal + rightTopVal;
+let midRow = leftMidVal + centerMidVal + rightMidVal;
+let botRow = leftBotVal + centerBotVal + rightBotVal;
+let ltrb = leftTopVal + centerMidVal + rightBotVal;
+let rtlb = rightTopVal + centerMidVal + leftBotVal;
+
+//Checks who the winner is and whether the game is over
+
+let whoWon = '';
+
+const computerWon = () => {
+    switch (-3) {
+        case leftCol:
+        case centerCol:
+        case rightCol:
+        case topRow:
+        case midRow:
+        case botRow:
+        case ltrb:
+        case rtlb:
+            whoWon = 'computer';
+    }
+}
+
+const computerWon = () => {
+    switch (3) {
+        case leftCol:
+        case centerCol:
+        case rightCol:
+        case topRow:
+        case midRow:
+        case botRow:
+        case ltrb:
+        case rtlb:
+            whoWon = 'human';
+    }
 }
