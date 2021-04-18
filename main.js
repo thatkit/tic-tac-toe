@@ -32,14 +32,18 @@ const hideWhoStartsOptions = () => {
     document.getElementById('who-starts').textContent = `${whoStarts} starts the game!`;
 }
 
+const showTheGameField = () => document.getElementById('game-field').style.display = 'grid';
+
 computer.onclick = () => {
     whoStarts = 'computer';
     hideWhoStartsOptions();
+    showTheGameField();
 }
 
 human.onclick = () => {
     whoStarts = 'human';
     hideWhoStartsOptions();
+    showTheGameField();
 }
 
 // User-end interactions
