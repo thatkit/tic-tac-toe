@@ -128,7 +128,7 @@ const markO = val => val.innerHTML = `<p class='marked-o'>${o}</p>`;
 
 //Computer marking boxes
 
-const compMarks = whoStarts => {
+const compMarks = () => {
     let markVal = -1;
     
     let arrInd = Math.floor(Math.random() * 9);
@@ -142,3 +142,11 @@ const compMarks = whoStarts => {
 
     turnCountIncrements();
 }
+
+
+
+
+
+
+//Tests (console output)
+console.log(whoStarts);
