@@ -16,11 +16,6 @@ const rightBot = document.querySelector('.right.bot');
 
 const arrBoxRefs = [leftTop, leftMid, leftBot, centerTop, centerMid, centerBot, rightTop, rightMid, rightBot];
 
-// Storing game values of 'X' and 'O' in vars
-
-const x = 'X';
-const o = 'O';
-
 // Storing first player button references in vars
 
 const computer = document.getElementById('firstCom');
@@ -104,6 +99,9 @@ User-end interactions
 
 //Marking X or O
 
+const x = 'X';
+const o = 'O';
+
 const markX = val => val.innerHTML = `<p class='marked-x'>${x}</p>`;
 const markO = val => val.innerHTML = `<p class='marked-o'>${o}</p>`;
 
@@ -140,10 +138,19 @@ const compMarks = () => {
     turnCountIncrements();
 }
 
+//Human marks
 
-//Checks who the winner is and whether the game is over
+const humMarks = box => {
+    let markVal = 1;
 
-const humanWon = () => {
+    if (whoStarts === 'human') {
+        box.onclick = () => box.innerHTML = `<p class='marked-o'>${o}</p>`;
+    } else {
+        box.onclick = () => box.innerHTML = `<p class='marked-x'>${x}</p>`;
+    }
+
+    updateWinCombs();
+
     switch (3) {
         case leftCol:
         case centerCol:
@@ -155,9 +162,19 @@ const humanWon = () => {
         case rtlb:
             whoWon = 'human';
     }
+    
+    turnCountIncrements();
 }
 
-
+leftTop.onclick = () => humMarks(leftTop);
+leftMid.onclick = () => humMarks(leftMid);
+leftBot.onclick = () => humMarks(leftBot);
+centerTop.onclick = () => humMarks(centerTop);
+centerMid.onclick = () => humMarks(centerMid);
+centerBot.onclick = () => humMarks(centerBot);
+rightTop.onclick = () => humMarks(rightTop);
+rightMid.onclick = () => humMarks(rightMid);
+rightBot.onclick = () => humMarks(rightBot);
 
 //Tests (console output)
 console.log(whoStarts);
