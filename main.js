@@ -142,6 +142,39 @@ const compMarks = () => {
 
 const humMarks = box => {
     let markVal = 1;
+    
+    switch (box) {
+        case leftTop:
+            arrBoxVals[0] = markVal;
+            break;
+        case leftMid:
+            arrBoxVals[1] = markVal;
+            break;
+        case leftBot:
+            arrBoxVals[2] = markVal;
+            break;
+        case centerTop:
+            arrBoxVals[3] = markVal;
+            break;
+        case centerMid:
+            arrBoxVals[4] = markVal;
+            break;
+        case centerBot:
+            arrBoxVals[5] = markVal;
+            break;
+        case rightTop:
+            arrBoxVals[6] = markVal;
+            break;
+        case rightMid:
+            arrBoxVals[7] = markVal;
+            break;
+        case rightBot:
+            arrBoxVals[8] = markVal;
+            break;
+        default:
+            console.log('something wrong with humMarks() func');
+            break;
+    }
 
     if (whoStarts === 'human') {
         box.onclick = () => box.innerHTML = `<p class='marked-o'>${o}</p>`;
@@ -177,5 +210,3 @@ rightMid.onclick = () => humMarks(rightMid);
 rightBot.onclick = () => humMarks(rightBot);
 
 //Tests (console output)
-console.log(whoStarts);
-
