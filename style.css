@@ -87,3 +87,7 @@ div {
     background-color: cadetblue;
     border: 1px solid #000;
 }
+
+p.marked {
+    font-size: 4rem;
+}

@@ -102,8 +102,8 @@ User-end interactions
 const x = 'X';
 const o = 'O';
 
-const markX = val => val.innerHTML = `<p class='marked-x'>${x}</p>`;
-const markO = val => val.innerHTML = `<p class='marked-o'>${o}</p>`;
+const markX = val => val.innerHTML = `<p class='marked x'>${x}</p>`;
+const markO = val => val.innerHTML = `<p class='marked o'>${o}</p>`;
 
 //Computer marks boxes, updates the winning combinations, increments round number
 
@@ -177,9 +177,9 @@ const humMarks = box => {
     }
 
     if (whoStarts === 'human') {
-        box.onclick = () => box.innerHTML = `<p class='marked-o'>${o}</p>`;
+        box.onclick = () => box.innerHTML = `<p class='marked o'>${o}</p>`;
     } else {
-        box.onclick = () => box.innerHTML = `<p class='marked-x'>${x}</p>`;
+        box.onclick = () => box.innerHTML = `<p class='marked x'>${x}</p>`;
     }
 
     updateWinCombs();
@@ -209,4 +209,10 @@ rightTop.onclick = () => humMarks(rightTop);
 rightMid.onclick = () => humMarks(rightMid);
 rightBot.onclick = () => humMarks(rightBot);
 
+
+
+
 //Tests (console output)
+
+//Messages for future me
+console.log('There has to be a logic to prevent "O" and "X" from overlapping each other.');
