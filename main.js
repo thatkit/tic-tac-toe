@@ -221,4 +221,4 @@ rightBot.onclick = () => humMarks(rightBot);
 //Tests (console output)
 
 //Messages for future me
-console.log('There has to be a logic to prevent "O" and "X" from overlapping each other.');
+console.log('There has to be a logic to prevent "O" and "X" from overlapping each other. UPD: compMarks can do it once in a box, but overlaps human when all boxes are full.');
