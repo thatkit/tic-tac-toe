@@ -109,16 +109,22 @@ const markO = val => val.innerHTML = `<p class='marked o'>${o}</p>`;
 
 let whoWon = '';
 
+const arrInd = () => Math.floor(Math.random() * 9);
+
 const compMarks = () => {
     let markVal = -1;
     
-    let arrInd = Math.floor(Math.random() * 9);
-    arrBoxVals[arrInd] = markVal;
+    let ind = arrInd();
+    while (arrBoxVals[ind] !== 0 && arrBoxVals.includes(0)) {
+        ind = arrInd();
+    }
+
+    arrBoxVals[ind] = markVal;
 
     if (whoStarts === 'computer') {
-        markO(arrBoxRefs[arrInd]);
+        markO(arrBoxRefs[ind]);
     } else {
-        markX(arrBoxRefs[arrInd]);
+        markX(arrBoxRefs[ind]);
     }
 
     updateWinCombs();
