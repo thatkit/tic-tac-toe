@@ -236,20 +236,25 @@ const humMarks = box => {
 //Game running
 
 const gameRun = () => {
-    if (whoStarts === 'computer') {
-        compMarks();
-    } else {
-        leftTop.onclick = () => humMarks(leftTop);
-        leftMid.onclick = () => humMarks(leftMid);
-        leftBot.onclick = () => humMarks(leftBot);
-        centerTop.onclick = () => humMarks(centerTop);
-        centerMid.onclick = () => humMarks(centerMid);
-        centerBot.onclick = () => humMarks(centerBot);
-        rightTop.onclick = () => humMarks(rightTop);
-        rightMid.onclick = () => humMarks(rightMid);
-        rightBot.onclick = () => humMarks(rightBot);
-    }
+    
+    /*while (whoWon !== 'computer' || whoWon !== 'human') {
+        if (whoStarts === 'computer') {
+            compMarks();
+        } else {
+            leftTop.onclick = () => humMarks(leftTop);
+            leftMid.onclick = () => humMarks(leftMid);
+            leftBot.onclick = () => humMarks(leftBot);
+            centerTop.onclick = () => humMarks(centerTop);
+            centerMid.onclick = () => humMarks(centerMid);
+            centerBot.onclick = () => humMarks(centerBot);
+            rightTop.onclick = () => humMarks(rightTop);
+            rightMid.onclick = () => humMarks(rightMid);
+            rightBot.onclick = () => humMarks(rightBot);
+        }
+    }*/
+
 }
+
 
 
 
