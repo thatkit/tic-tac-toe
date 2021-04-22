@@ -149,7 +149,7 @@ const compMarks = () => {
 const humMarks = box => {
     let markVal = 1;
     
-    switch (box) {
+    /*switch (box) {
         case leftTop:
             arrBoxVals[0] = markVal;
             break;
@@ -180,12 +180,34 @@ const humMarks = box => {
         default:
             console.log('something wrong with humMarks() func');
             break;
-    }
+    }*/
 
-    if (whoStarts === 'human') {
-        box.onclick = () => box.innerHTML = `<p class='marked o'>${o}</p>`;
+    if (box === leftTop) {
+        arrBoxVals[0] = markVal;
+    } else if (box === leftMid) {
+        arrBoxVals[1] = markVal;
+    } else if (box === leftBot) {
+        arrBoxVals[2] = markVal;
+    } else if (box === centerTop) {
+        arrBoxVals[3] = markVal;
+    } else if (box === centerMid) {
+        arrBoxVals[4] = markVal;
+    } else if (box === centerBot) {
+        arrBoxVals[5] = markVal;
+    } else if (box === rightTop) {
+        arrBoxVals[6] = markVal;
+    } else if (box === rightMid) {
+        arrBoxVals[7] = markVal;
+    } else if (box === rightBot) {
+        arrBoxVals[8] = markVal;
     } else {
-        box.onclick = () => box.innerHTML = `<p class='marked x'>${x}</p>`;
+        console.log('something wrong with humMarks() func');
+    }
+        
+    if (whoStarts === 'human') {
+        box.innerHTML = `<p class='marked o'>${o}</p>`;
+    } else {
+        box.innerHTML = `<p class='marked x'>${x}</p>`;
     }
 
     updateWinCombs();
