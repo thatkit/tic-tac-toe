@@ -148,66 +148,72 @@ const compMarks = () => {
 
 const humMarks = box => {
     let markVal = 1;
-    
-    /*switch (box) {
-        case leftTop:
-            arrBoxVals[0] = markVal;
-            break;
-        case leftMid:
-            arrBoxVals[1] = markVal;
-            break;
-        case leftBot:
-            arrBoxVals[2] = markVal;
-            break;
-        case centerTop:
-            arrBoxVals[3] = markVal;
-            break;
-        case centerMid:
-            arrBoxVals[4] = markVal;
-            break;
-        case centerBot:
-            arrBoxVals[5] = markVal;
-            break;
-        case rightTop:
-            arrBoxVals[6] = markVal;
-            break;
-        case rightMid:
-            arrBoxVals[7] = markVal;
-            break;
-        case rightBot:
-            arrBoxVals[8] = markVal;
-            break;
-        default:
-            console.log('something wrong with humMarks() func');
-            break;
-    }*/
 
-    if (box === leftTop) {
+    if (box === leftTop && arrBoxVals[0] === 0) {
         arrBoxVals[0] = markVal;
-    } else if (box === leftMid) {
+        if (whoStarts === 'human') {
+            box.innerHTML = `<p class='marked o'>${o}</p>`;
+        } else {
+            box.innerHTML = `<p class='marked x'>${x}</p>`;
+        }
+    } else if (box === leftMid && arrBoxVals[1] === 0) {
         arrBoxVals[1] = markVal;
-    } else if (box === leftBot) {
+        if (whoStarts === 'human') {
+            box.innerHTML = `<p class='marked o'>${o}</p>`;
+        } else {
+            box.innerHTML = `<p class='marked x'>${x}</p>`;
+        }
+    } else if (box === leftBot && arrBoxVals[2] === 0) {
         arrBoxVals[2] = markVal;
-    } else if (box === centerTop) {
+        if (whoStarts === 'human') {
+            box.innerHTML = `<p class='marked o'>${o}</p>`;
+        } else {
+            box.innerHTML = `<p class='marked x'>${x}</p>`;
+        }
+    } else if (box === centerTop && arrBoxVals[3] === 0) {
         arrBoxVals[3] = markVal;
-    } else if (box === centerMid) {
+        if (whoStarts === 'human') {
+            box.innerHTML = `<p class='marked o'>${o}</p>`;
+        } else {
+            box.innerHTML = `<p class='marked x'>${x}</p>`;
+        }
+    } else if (box === centerMid && arrBoxVals[4] === 0) {
         arrBoxVals[4] = markVal;
-    } else if (box === centerBot) {
+        if (whoStarts === 'human') {
+            box.innerHTML = `<p class='marked o'>${o}</p>`;
+        } else {
+            box.innerHTML = `<p class='marked x'>${x}</p>`;
+        }
+    } else if (box === centerBot && arrBoxVals[5] === 0) {
         arrBoxVals[5] = markVal;
-    } else if (box === rightTop) {
+        if (whoStarts === 'human') {
+            box.innerHTML = `<p class='marked o'>${o}</p>`;
+        } else {
+            box.innerHTML = `<p class='marked x'>${x}</p>`;
+        }
+    } else if (box === rightTop && arrBoxVals[6] === 0) {
         arrBoxVals[6] = markVal;
-    } else if (box === rightMid) {
+        if (whoStarts === 'human') {
+            box.innerHTML = `<p class='marked o'>${o}</p>`;
+        } else {
+            box.innerHTML = `<p class='marked x'>${x}</p>`;
+        }
+    } else if (box === rightMid && arrBoxVals[7] === 0) {
         arrBoxVals[7] = markVal;
-    } else if (box === rightBot) {
+        if (whoStarts === 'human') {
+            box.innerHTML = `<p class='marked o'>${o}</p>`;
+        } else {
+            box.innerHTML = `<p class='marked x'>${x}</p>`;
+        }
+    } else if (box === rightBot && arrBoxVals[8] === 0) {
         arrBoxVals[8] = markVal;
+        if (whoStarts === 'human') {
+            box.innerHTML = `<p class='marked o'>${o}</p>`;
+        } else {
+            box.innerHTML = `<p class='marked x'>${x}</p>`;
+        }
     } else {
-        console.log('something wrong with humMarks() func');
-    }
-        
-    if (whoStarts === 'human') {
-        box.innerHTML = `<p class='marked o'>${o}</p>`;
-    } else {
-        box.innerHTML = `<p class='marked x'>${x}</p>`;
+        console.log('already occupied value');
     }
 
     updateWinCombs();
@@ -243,4 +249,4 @@ rightBot.onclick = () => humMarks(rightBot);
 //Tests (console output)
 
 //Messages for future me
-console.log('There has to be a logic to prevent "O" and "X" from overlapping each other. UPD: compMarks can do it once in a box, but overlaps human when all boxes are full.');
+console.log('Message for the future me: ');
