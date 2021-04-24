@@ -236,22 +236,33 @@ const humMarks = box => {
 //Game running
 
 const gameRun = () => {
-    
-    /*while (whoWon !== 'computer' || whoWon !== 'human') {
-        if (whoStarts === 'computer') {
+    if (whoStarts === 'computer') {
+        if (turnCount % 2 === 0) {
             compMarks();
         } else {
-            leftTop.onclick = () => humMarks(leftTop);
-            leftMid.onclick = () => humMarks(leftMid);
-            leftBot.onclick = () => humMarks(leftBot);
-            centerTop.onclick = () => humMarks(centerTop);
-            centerMid.onclick = () => humMarks(centerMid);
-            centerBot.onclick = () => humMarks(centerBot);
-            rightTop.onclick = () => humMarks(rightTop);
-            rightMid.onclick = () => humMarks(rightMid);
-            rightBot.onclick = () => humMarks(rightBot);
+            humMarks();
         }
-    }*/
+    } else if (whoStarts === 'human') {
+        if (turnCount % 2 === 0) {
+            humMarks();
+        } else {
+            compMarks();
+        }
+    } else {
+        console.log('gameRun() bug');
+    }
+
+    /*
+    leftTop.onclick = () => humMarks(leftTop);
+    leftMid.onclick = () => humMarks(leftMid);
+    leftBot.onclick = () => humMarks(leftBot);
+    centerTop.onclick = () => humMarks(centerTop);
+    centerMid.onclick = () => humMarks(centerMid);
+    centerBot.onclick = () => humMarks(centerBot);
+    rightTop.onclick = () => humMarks(rightTop);
+    rightMid.onclick = () => humMarks(rightMid);
+    rightBot.onclick = () => humMarks(rightBot);
+    */
 
 }
 
