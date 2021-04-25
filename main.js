@@ -231,117 +231,167 @@ const humMarks = box => {
     
 }
 
-//Game running
+//Game running and magic happening
+
+const getWinner = () => {
+    if (whoWon === 'computer') {
+        console.log('computer');
+    } else if (whoWon === 'human') {
+        console.log('human');
+    } else {
+        console.log('nobody');
+    }
+}
 
 const gameRun = () => {
-    if (whoStarts === 'computer') {
+
+    if (whoStarts === 'computer' && whoWon === '') {
         if (turnCount % 2 === 0) {
             compMarks();
             turnCountIncrements();
+            getWinner();
         } else {
             leftTop.onclick = () => {
                 humMarks(leftTop);
+                turnCountIncrements();
                 compMarks();
                 turnCountIncrements();
+                getWinner();
             } 
             leftMid.onclick = () => {
                 humMarks(leftMid);
+                turnCountIncrements();
                 compMarks();
                 turnCountIncrements();
+                getWinner();
             }
             leftBot.onclick = () => {
                 humMarks(leftBot);
+                turnCountIncrements();
                 compMarks();
                 turnCountIncrements();
+                getWinner();
             }
             centerTop.onclick = () => {
                 humMarks(centerTop);
+                turnCountIncrements();
                 compMarks();
                 turnCountIncrements();
+                getWinner();
             }
             centerMid.onclick = () => {
                 humMarks(centerMid);
+                turnCountIncrements();
                 compMarks();
                 turnCountIncrements();
+                getWinner();
             }
             centerBot.onclick = () => {
                 humMarks(centerBot);
+                turnCountIncrements();
                 compMarks();
                 turnCountIncrements();
+                getWinner();
             }
             rightTop.onclick = () => {
                 humMarks(rightTop);
+                turnCountIncrements();
                 compMarks();
                 turnCountIncrements();
+                getWinner();
             }
             rightMid.onclick = () => {
                 humMarks(rightMid);
+                turnCountIncrements();
                 compMarks();
                 turnCountIncrements();
+                getWinner();
             }
             rightBot.onclick = () => {
                 humMarks(rightBot);
+                turnCountIncrements();
                 compMarks();
                 turnCountIncrements();
+                getWinner();
             }
         }
-    } else if (whoStarts === 'human') {
+    } else if (whoStarts === 'human' && whoWon === '') {
         if (turnCount % 2 === 0) {
             leftTop.onclick = () => {
                 humMarks(leftTop);
+                turnCountIncrements();
                 compMarks();
                 turnCountIncrements();
+                getWinner();
             } 
             leftMid.onclick = () => {
                 humMarks(leftMid);
+                turnCountIncrements();
                 compMarks();
                 turnCountIncrements();
+                getWinner();
             }
             leftBot.onclick = () => {
                 humMarks(leftBot);
+                turnCountIncrements();
                 compMarks();
                 turnCountIncrements();
+                getWinner();
             }
             centerTop.onclick = () => {
                 humMarks(centerTop);
+                turnCountIncrements();
                 compMarks();
                 turnCountIncrements();
+                getWinner();
             }
             centerMid.onclick = () => {
                 humMarks(centerMid);
+                turnCountIncrements();
                 compMarks();
                 turnCountIncrements();
+                getWinner();
             }
             centerBot.onclick = () => {
                 humMarks(centerBot);
+                turnCountIncrements();
                 compMarks();
                 turnCountIncrements();
+                getWinner();
             }
             rightTop.onclick = () => {
                 humMarks(rightTop);
+                turnCountIncrements();
                 compMarks();
                 turnCountIncrements();
+                getWinner();
             }
             rightMid.onclick = () => {
                 humMarks(rightMid);
+                turnCountIncrements();
                 compMarks();
                 turnCountIncrements();
+                getWinner();
             }
             rightBot.onclick = () => {
                 humMarks(rightBot);
+                turnCountIncrements();
                 compMarks();
                 turnCountIncrements();
+                getWinner();
             }
         } else {
             compMarks();
             turnCountIncrements();
+            getWinner();
         }
     } else {
         console.log('gameRun() bug');
     }
 
+
 }
 
 
 //Messages for future me
-console.log('Message for the future me: ');
+console.log('Message for the future me: (1) I have to run gameRun() twice ehen computer starts in order for human to be able to make a turn; (2) Computer keeps playing even after the winner is chosen,;');
