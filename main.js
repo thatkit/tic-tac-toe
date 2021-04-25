@@ -250,6 +250,81 @@ const humFunSet = () => {
     }
 }
 
+const onclickHandlersRefactor = () => {
+    leftTop.onclick = () => {
+        if (!arrBoxVals[0]) {
+            humMarks(leftTop);
+            humFunSet();
+        } else {
+            console.log('the box is already checked');
+        }
+    } 
+    leftMid.onclick = () => {
+        if (!arrBoxVals[1]) {
+            humMarks(leftMid);
+            humFunSet();
+        } else {
+            console.log('the box is already checked');
+        }
+    }
+    leftBot.onclick = () => {
+        if (!arrBoxVals[2]) {
+            humMarks(leftBot);
+            humFunSet();
+        } else {
+            console.log('the box is already checked');
+        }
+    }
+    centerTop.onclick = () => {
+        if (!arrBoxVals[3]) {
+            humMarks(centerTop);
+            humFunSet();
+        } else {
+            console.log('the box is already checked');
+        }         
+    }
+    centerMid.onclick = () => {
+        if (!arrBoxVals[4]) {
+            humMarks(centerMid);
+            humFunSet();
+        } else {
+            console.log('the box is already checked');
+        }
+    }
+    centerBot.onclick = () => {
+        if (!arrBoxVals[5]) {
+            humMarks(centerBot);
+            humFunSet();
+        } else {
+            console.log('the box is already checked');
+        }         
+    }
+    rightTop.onclick = () => {
+        if (!arrBoxVals[6]) {
+            humMarks(rightTop);
+            humFunSet();
+        } else {
+            console.log('the box is already checked');
+        }
+    }
+    rightMid.onclick = () => {
+        if (!arrBoxVals[7]) {
+            humMarks(rightMid);
+            humFunSet();
+        } else {
+            console.log('the box is already checked');
+        }
+    }
+    rightBot.onclick = () => {
+        if (!arrBoxVals[8]) {
+            humMarks(rightBot);
+            humFunSet();
+        } else {
+            console.log('the box is already checked');
+        }
+    }
+}
+
 const gameRun = () => {
 
     if (whoStarts === 'computer') {
@@ -258,153 +333,11 @@ const gameRun = () => {
         turnCountIncrements();
         getWinner();
         
-        leftTop.onclick = () => {
-            if (!arrBoxVals[0]) {
-                humMarks(leftTop);
-                humFunSet();
-            } else {
-                console.log('the box is already checked');
-            }
-        } 
-        leftMid.onclick = () => {
-            if (!arrBoxVals[1]) {
-                humMarks(leftMid);
-                humFunSet();
-            } else {
-                console.log('the box is already checked');
-            }
-        }
-        leftBot.onclick = () => {
-            if (!arrBoxVals[2]) {
-                humMarks(leftBot);
-                humFunSet();
-            } else {
-                console.log('the box is already checked');
-            }
-        }
-        centerTop.onclick = () => {
-            if (!arrBoxVals[3]) {
-                humMarks(centerTop);
-                humFunSet();
-            } else {
-                console.log('the box is already checked');
-            }         
-        }
-        centerMid.onclick = () => {
-            if (!arrBoxVals[4]) {
-                humMarks(centerMid);
-                humFunSet();
-            } else {
-                console.log('the box is already checked');
-            }
-        }
-        centerBot.onclick = () => {
-            if (!arrBoxVals[5]) {
-                humMarks(centerBot);
-                humFunSet();
-            } else {
-                console.log('the box is already checked');
-            }         
-        }
-        rightTop.onclick = () => {
-            if (!arrBoxVals[6]) {
-                humMarks(rightTop);
-                humFunSet();
-            } else {
-                console.log('the box is already checked');
-            }
-        }
-        rightMid.onclick = () => {
-            if (!arrBoxVals[7]) {
-                humMarks(rightMid);
-                humFunSet();
-            } else {
-                console.log('the box is already checked');
-            }
-        }
-        rightBot.onclick = () => {
-            if (!arrBoxVals[8]) {
-                humMarks(rightBot);
-                humFunSet();
-            } else {
-                console.log('the box is already checked');
-            }
-        }
+        onclickHandlersRefactor();
         
     } else if (whoStarts === 'human') {
 
-        leftTop.onclick = () => {
-            if (!arrBoxVals[0]) {
-                humMarks(leftTop);
-                humFunSet();
-            } else {
-                console.log('the box is already checked');
-            }
-        } 
-        leftMid.onclick = () => {
-            if (!arrBoxVals[1]) {
-                humMarks(leftMid);
-                humFunSet();
-            } else {
-                console.log('the box is already checked');
-            }
-        }
-        leftBot.onclick = () => {
-            if (!arrBoxVals[2]) {
-                humMarks(leftBot);
-                humFunSet();
-            } else {
-                console.log('the box is already checked');
-            }
-        }
-        centerTop.onclick = () => {
-            if (!arrBoxVals[3]) {
-                humMarks(centerTop);
-                humFunSet();
-            } else {
-                console.log('the box is already checked');
-            }         
-        }
-        centerMid.onclick = () => {
-            if (!arrBoxVals[4]) {
-                humMarks(centerMid);
-                humFunSet();
-            } else {
-                console.log('the box is already checked');
-            }
-        }
-        centerBot.onclick = () => {
-            if (!arrBoxVals[5]) {
-                humMarks(centerBot);
-                humFunSet();
-            } else {
-                console.log('the box is already checked');
-            }         
-        }
-        rightTop.onclick = () => {
-            if (!arrBoxVals[6]) {
-                humMarks(rightTop);
-                humFunSet();
-            } else {
-                console.log('the box is already checked');
-            }
-        }
-        rightMid.onclick = () => {
-            if (!arrBoxVals[7]) {
-                humMarks(rightMid);
-                humFunSet();
-            } else {
-                console.log('the box is already checked');
-            }
-        }
-        rightBot.onclick = () => {
-            if (!arrBoxVals[8]) {
-                humMarks(rightBot);
-                humFunSet();
-            } else {
-                console.log('the box is already checked');
-            }
-        }
+        onclickHandlersRefactor();
 
     } else {
         console.log('gameRun() bug');
@@ -415,4 +348,4 @@ const gameRun = () => {
 
 
 //Messages for future me
-console.log('Message for the future me: (1) Human can keep playing even after the winner is chosen;');
+console.log('Message for the future me: (1) Human can keep playing even after the winner is chosen, meaning that human can "win" after computer actually won;');
