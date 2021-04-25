@@ -47,10 +47,6 @@ human.onclick = () => {
     gameRun();
 }
 
-/*
-Game mechanics
-*/
-
 //Variables (containers) for boxes
 
 let leftTopVal = 0;
@@ -89,15 +85,13 @@ const updateWinCombs = () => {
     rtlb = arrBoxVals[6] + arrBoxVals[4] + arrBoxVals[2];
 }
 
+let whoWon = '';
+
 //Counts which turn it is
 
 let turnCount = 0;
 
 const turnCountIncrements = () => turnCount++;
-
-/*
-User-end interactions
-*/
 
 //Marking X or O
 
@@ -108,8 +102,6 @@ const markX = val => val.innerHTML = `<p class='marked x'>${x}</p>`;
 const markO = val => val.innerHTML = `<p class='marked o'>${o}</p>`;
 
 //Computer marks boxes, updates the winning combinations, increments round number
-
-let whoWon = '';
 
 const arrInd = () => Math.floor(Math.random() * 9);
 
