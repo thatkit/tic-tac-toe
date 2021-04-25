@@ -141,7 +141,6 @@ const compMarks = () => {
             whoWon = 'computer';
     }
 
-    turnCountIncrements();
 }
 
 //Human marks
@@ -230,7 +229,6 @@ const humMarks = box => {
             whoWon = 'human';
     }
     
-    turnCountIncrements();
 }
 
 //Game running
@@ -239,41 +237,111 @@ const gameRun = () => {
     if (whoStarts === 'computer') {
         if (turnCount % 2 === 0) {
             compMarks();
+            turnCountIncrements();
         } else {
-            humMarks();
+            leftTop.onclick = () => {
+                humMarks(leftTop);
+                compMarks();
+                turnCountIncrements();
+            } 
+            leftMid.onclick = () => {
+                humMarks(leftMid);
+                compMarks();
+                turnCountIncrements();
+            }
+            leftBot.onclick = () => {
+                humMarks(leftBot);
+                compMarks();
+                turnCountIncrements();
+            }
+            centerTop.onclick = () => {
+                humMarks(centerTop);
+                compMarks();
+                turnCountIncrements();
+            }
+            centerMid.onclick = () => {
+                humMarks(centerMid);
+                compMarks();
+                turnCountIncrements();
+            }
+            centerBot.onclick = () => {
+                humMarks(centerBot);
+                compMarks();
+                turnCountIncrements();
+            }
+            rightTop.onclick = () => {
+                humMarks(rightTop);
+                compMarks();
+                turnCountIncrements();
+            }
+            rightMid.onclick = () => {
+                humMarks(rightMid);
+                compMarks();
+                turnCountIncrements();
+            }
+            rightBot.onclick = () => {
+                humMarks(rightBot);
+                compMarks();
+                turnCountIncrements();
+            }
         }
     } else if (whoStarts === 'human') {
         if (turnCount % 2 === 0) {
-            humMarks();
+            leftTop.onclick = () => {
+                humMarks(leftTop);
+                compMarks();
+                turnCountIncrements();
+            } 
+            leftMid.onclick = () => {
+                humMarks(leftMid);
+                compMarks();
+                turnCountIncrements();
+            }
+            leftBot.onclick = () => {
+                humMarks(leftBot);
+                compMarks();
+                turnCountIncrements();
+            }
+            centerTop.onclick = () => {
+                humMarks(centerTop);
+                compMarks();
+                turnCountIncrements();
+            }
+            centerMid.onclick = () => {
+                humMarks(centerMid);
+                compMarks();
+                turnCountIncrements();
+            }
+            centerBot.onclick = () => {
+                humMarks(centerBot);
+                compMarks();
+                turnCountIncrements();
+            }
+            rightTop.onclick = () => {
+                humMarks(rightTop);
+                compMarks();
+                turnCountIncrements();
+            }
+            rightMid.onclick = () => {
+                humMarks(rightMid);
+                compMarks();
+                turnCountIncrements();
+            }
+            rightBot.onclick = () => {
+                humMarks(rightBot);
+                compMarks();
+                turnCountIncrements();
+            }
         } else {
             compMarks();
+            turnCountIncrements();
         }
     } else {
         console.log('gameRun() bug');
     }
 
-    /*
-    leftTop.onclick = () => humMarks(leftTop);
-    leftMid.onclick = () => humMarks(leftMid);
-    leftBot.onclick = () => humMarks(leftBot);
-    centerTop.onclick = () => humMarks(centerTop);
-    centerMid.onclick = () => humMarks(centerMid);
-    centerBot.onclick = () => humMarks(centerBot);
-    rightTop.onclick = () => humMarks(rightTop);
-    rightMid.onclick = () => humMarks(rightMid);
-    rightBot.onclick = () => humMarks(rightBot);
-    */
-
 }
 
-
-
-
-
-
-
-
-//Tests (console output)
 
 //Messages for future me
 console.log('Message for the future me: ');
