@@ -1,3 +1,11 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+
 /* Global Styles */
 
 * {
@@ -11,6 +19,7 @@ html {
 body {
     margin: 0;
     padding: 3rem;
+    font-family: 'Bangers', cursive, 'Knewave', cursive;;
     font-size: 1rem;
 }
 
@@ -89,5 +98,6 @@ div {
 }
 
 p.marked {
+    font-family: 'Varela Round', sans-serif;
     font-size: 4rem;
 }
