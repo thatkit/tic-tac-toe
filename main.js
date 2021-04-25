@@ -237,6 +237,19 @@ const getWinner = () => {
     }
 }
 
+const humFunSet = () => {
+    turnCountIncrements();
+    if (whoWon !== 'computer') {
+        getWinner();
+    }
+    
+    if (whoWon !== 'human') {
+        compMarks();
+        turnCountIncrements();
+        getWinner();
+    }
+}
+
 const gameRun = () => {
 
     if (whoStarts === 'computer') {
@@ -247,141 +260,87 @@ const gameRun = () => {
         
         leftTop.onclick = () => {
             humMarks(leftTop);
-            turnCountIncrements();
-            compMarks();
-            turnCountIncrements();
-            getWinner();
+            humFunSet();
         } 
         leftMid.onclick = () => {
             humMarks(leftMid);
-            turnCountIncrements();
-            compMarks();
-            turnCountIncrements();
-            getWinner();
+            humFunSet();
         }
         leftBot.onclick = () => {
             humMarks(leftBot);
-            turnCountIncrements();
-            compMarks();
-            turnCountIncrements();
-            getWinner();
+            humFunSet();
         }
         centerTop.onclick = () => {
             humMarks(centerTop);
-            turnCountIncrements();
-            compMarks();
-            turnCountIncrements();
-            getWinner();
+            humFunSet();
         }
         centerMid.onclick = () => {
             humMarks(centerMid);
-            turnCountIncrements();
-            compMarks();
-            turnCountIncrements();
-            getWinner();
+            humFunSet();
         }
         centerBot.onclick = () => {
             humMarks(centerBot);
-            turnCountIncrements();
-            compMarks();
-            turnCountIncrements();
-            getWinner();
+            humFunSet();
         }
         rightTop.onclick = () => {
             humMarks(rightTop);
-            turnCountIncrements();
-            compMarks();
-            turnCountIncrements();
-            getWinner();
+            humFunSet();
         }
         rightMid.onclick = () => {
             humMarks(rightMid);
-            turnCountIncrements();
-            compMarks();
-            turnCountIncrements();
-            getWinner();
+            humFunSet();
         }
         rightBot.onclick = () => {
             humMarks(rightBot);
-            turnCountIncrements();
-            compMarks();
-            turnCountIncrements();
-            getWinner();
+            humFunSet();
         }
         
     } else if (whoStarts === 'human') {
 
         leftTop.onclick = () => {
             humMarks(leftTop);
-            turnCountIncrements();
-            compMarks();
-            turnCountIncrements();
-            getWinner();
+            humFunSet();
         } 
         leftMid.onclick = () => {
             humMarks(leftMid);
-            turnCountIncrements();
-            compMarks();
-            turnCountIncrements();
-            getWinner();
+            humFunSet();
         }
         leftBot.onclick = () => {
             humMarks(leftBot);
-            turnCountIncrements();
-            compMarks();
-            turnCountIncrements();
-            getWinner();
+            humFunSet();
         }
         centerTop.onclick = () => {
             humMarks(centerTop);
-            turnCountIncrements();
-            compMarks();
-            turnCountIncrements();
-            getWinner();
+            humFunSet();
         }
         centerMid.onclick = () => {
             humMarks(centerMid);
-            turnCountIncrements();
-            compMarks();
-            turnCountIncrements();
-            getWinner();
+            humFunSet();
         }
         centerBot.onclick = () => {
             humMarks(centerBot);
-            turnCountIncrements();
-            compMarks();
-            turnCountIncrements();
-            getWinner();
+            humFunSet();
         }
         rightTop.onclick = () => {
             humMarks(rightTop);
-            turnCountIncrements();
-            compMarks();
-            turnCountIncrements();
-            getWinner();
+            humFunSet();
         }
         rightMid.onclick = () => {
             humMarks(rightMid);
-            turnCountIncrements();
-            compMarks();
-            turnCountIncrements();
-            getWinner();
+            humFunSet();
         }
         rightBot.onclick = () => {
             humMarks(rightBot);
-            turnCountIncrements();
-            compMarks();
-            turnCountIncrements();
-            getWinner();
+            humFunSet();
         }
 
     } else {
         console.log('gameRun() bug');
     }
 
-
 }
 
 
+
 //Messages for future me
-console.log('Message for the future me: (1) Computer keeps playing even after the winner is chosen,;');
+console.log('Message for the future me: (1) Human can keep playing even after the winner is chosen; (2) Human can make a turn even if a box is already checked;');
