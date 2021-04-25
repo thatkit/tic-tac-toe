@@ -259,79 +259,151 @@ const gameRun = () => {
         getWinner();
         
         leftTop.onclick = () => {
-            humMarks(leftTop);
-            humFunSet();
+            if (!arrBoxVals[0]) {
+                humMarks(leftTop);
+                humFunSet();
+            } else {
+                console.log('the box is already checked');
+            }
         } 
         leftMid.onclick = () => {
-            humMarks(leftMid);
-            humFunSet();
+            if (!arrBoxVals[1]) {
+                humMarks(leftMid);
+                humFunSet();
+            } else {
+                console.log('the box is already checked');
+            }
         }
         leftBot.onclick = () => {
-            humMarks(leftBot);
-            humFunSet();
+            if (!arrBoxVals[2]) {
+                humMarks(leftBot);
+                humFunSet();
+            } else {
+                console.log('the box is already checked');
+            }
         }
         centerTop.onclick = () => {
-            humMarks(centerTop);
-            humFunSet();
+            if (!arrBoxVals[3]) {
+                humMarks(centerTop);
+                humFunSet();
+            } else {
+                console.log('the box is already checked');
+            }         
         }
         centerMid.onclick = () => {
-            humMarks(centerMid);
-            humFunSet();
+            if (!arrBoxVals[4]) {
+                humMarks(centerMid);
+                humFunSet();
+            } else {
+                console.log('the box is already checked');
+            }
         }
         centerBot.onclick = () => {
-            humMarks(centerBot);
-            humFunSet();
+            if (!arrBoxVals[5]) {
+                humMarks(centerBot);
+                humFunSet();
+            } else {
+                console.log('the box is already checked');
+            }         
         }
         rightTop.onclick = () => {
-            humMarks(rightTop);
-            humFunSet();
+            if (!arrBoxVals[6]) {
+                humMarks(rightTop);
+                humFunSet();
+            } else {
+                console.log('the box is already checked');
+            }
         }
         rightMid.onclick = () => {
-            humMarks(rightMid);
-            humFunSet();
+            if (!arrBoxVals[7]) {
+                humMarks(rightMid);
+                humFunSet();
+            } else {
+                console.log('the box is already checked');
+            }
         }
         rightBot.onclick = () => {
-            humMarks(rightBot);
-            humFunSet();
+            if (!arrBoxVals[8]) {
+                humMarks(rightBot);
+                humFunSet();
+            } else {
+                console.log('the box is already checked');
+            }
         }
         
     } else if (whoStarts === 'human') {
 
         leftTop.onclick = () => {
-            humMarks(leftTop);
-            humFunSet();
+            if (!arrBoxVals[0]) {
+                humMarks(leftTop);
+                humFunSet();
+            } else {
+                console.log('the box is already checked');
+            }
         } 
         leftMid.onclick = () => {
-            humMarks(leftMid);
-            humFunSet();
+            if (!arrBoxVals[1]) {
+                humMarks(leftMid);
+                humFunSet();
+            } else {
+                console.log('the box is already checked');
+            }
         }
         leftBot.onclick = () => {
-            humMarks(leftBot);
-            humFunSet();
+            if (!arrBoxVals[2]) {
+                humMarks(leftBot);
+                humFunSet();
+            } else {
+                console.log('the box is already checked');
+            }
         }
         centerTop.onclick = () => {
-            humMarks(centerTop);
-            humFunSet();
+            if (!arrBoxVals[3]) {
+                humMarks(centerTop);
+                humFunSet();
+            } else {
+                console.log('the box is already checked');
+            }         
         }
         centerMid.onclick = () => {
-            humMarks(centerMid);
-            humFunSet();
+            if (!arrBoxVals[4]) {
+                humMarks(centerMid);
+                humFunSet();
+            } else {
+                console.log('the box is already checked');
+            }
         }
         centerBot.onclick = () => {
-            humMarks(centerBot);
-            humFunSet();
+            if (!arrBoxVals[5]) {
+                humMarks(centerBot);
+                humFunSet();
+            } else {
+                console.log('the box is already checked');
+            }         
         }
         rightTop.onclick = () => {
-            humMarks(rightTop);
-            humFunSet();
+            if (!arrBoxVals[6]) {
+                humMarks(rightTop);
+                humFunSet();
+            } else {
+                console.log('the box is already checked');
+            }
         }
         rightMid.onclick = () => {
-            humMarks(rightMid);
-            humFunSet();
+            if (!arrBoxVals[7]) {
+                humMarks(rightMid);
+                humFunSet();
+            } else {
+                console.log('the box is already checked');
+            }
         }
         rightBot.onclick = () => {
-            humMarks(rightBot);
-            humFunSet();
+            if (!arrBoxVals[8]) {
+                humMarks(rightBot);
+                humFunSet();
+            } else {
+                console.log('the box is already checked');
+            }
         }
 
     } else {
@@ -343,4 +415,4 @@ const gameRun = () => {
 
 
 //Messages for future me
-console.log('Message for the future me: (1) Human can keep playing even after the winner is chosen; (2) Human can make a turn even if a box is already checked;');
+console.log('Message for the future me: (1) Human can keep playing even after the winner is chosen;');
