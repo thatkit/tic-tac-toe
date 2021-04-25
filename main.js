@@ -37,12 +37,14 @@ computer.onclick = () => {
     whoStarts = 'computer';
     hideWhoStartsOptions();
     showTheGameField();
+    gameRun();
 }
 
 human.onclick = () => {
     whoStarts = 'human';
     hideWhoStartsOptions();
     showTheGameField();
+    gameRun();
 }
 
 /*
@@ -245,7 +247,7 @@ const getWinner = () => {
 
 const gameRun = () => {
 
-    if (whoStarts === 'computer' && whoWon === '') {
+    if (whoStarts === 'computer') {
         if (turnCount % 2 === 0) {
             compMarks();
             turnCountIncrements();
@@ -315,7 +317,7 @@ const gameRun = () => {
                 getWinner();
             }
         }
-    } else if (whoStarts === 'human' && whoWon === '') {
+    } else if (whoStarts === 'human') {
         if (turnCount % 2 === 0) {
             leftTop.onclick = () => {
                 humMarks(leftTop);
