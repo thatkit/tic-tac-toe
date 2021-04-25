@@ -248,145 +248,141 @@ const getWinner = () => {
 const gameRun = () => {
 
     if (whoStarts === 'computer') {
-        if (turnCount % 2 === 0) {
+        
+        compMarks();
+        turnCountIncrements();
+        getWinner();
+        
+        leftTop.onclick = () => {
+            humMarks(leftTop);
+            turnCountIncrements();
             compMarks();
             turnCountIncrements();
             getWinner();
-        } else {
-            leftTop.onclick = () => {
-                humMarks(leftTop);
-                turnCountIncrements();
-                compMarks();
-                turnCountIncrements();
-                getWinner();
-            } 
-            leftMid.onclick = () => {
-                humMarks(leftMid);
-                turnCountIncrements();
-                compMarks();
-                turnCountIncrements();
-                getWinner();
-            }
-            leftBot.onclick = () => {
-                humMarks(leftBot);
-                turnCountIncrements();
-                compMarks();
-                turnCountIncrements();
-                getWinner();
-            }
-            centerTop.onclick = () => {
-                humMarks(centerTop);
-                turnCountIncrements();
-                compMarks();
-                turnCountIncrements();
-                getWinner();
-            }
-            centerMid.onclick = () => {
-                humMarks(centerMid);
-                turnCountIncrements();
-                compMarks();
-                turnCountIncrements();
-                getWinner();
-            }
-            centerBot.onclick = () => {
-                humMarks(centerBot);
-                turnCountIncrements();
-                compMarks();
-                turnCountIncrements();
-                getWinner();
-            }
-            rightTop.onclick = () => {
-                humMarks(rightTop);
-                turnCountIncrements();
-                compMarks();
-                turnCountIncrements();
-                getWinner();
-            }
-            rightMid.onclick = () => {
-                humMarks(rightMid);
-                turnCountIncrements();
-                compMarks();
-                turnCountIncrements();
-                getWinner();
-            }
-            rightBot.onclick = () => {
-                humMarks(rightBot);
-                turnCountIncrements();
-                compMarks();
-                turnCountIncrements();
-                getWinner();
-            }
+        } 
+        leftMid.onclick = () => {
+            humMarks(leftMid);
+            turnCountIncrements();
+            compMarks();
+            turnCountIncrements();
+            getWinner();
         }
+        leftBot.onclick = () => {
+            humMarks(leftBot);
+            turnCountIncrements();
+            compMarks();
+            turnCountIncrements();
+            getWinner();
+        }
+        centerTop.onclick = () => {
+            humMarks(centerTop);
+            turnCountIncrements();
+            compMarks();
+            turnCountIncrements();
+            getWinner();
+        }
+        centerMid.onclick = () => {
+            humMarks(centerMid);
+            turnCountIncrements();
+            compMarks();
+            turnCountIncrements();
+            getWinner();
+        }
+        centerBot.onclick = () => {
+            humMarks(centerBot);
+            turnCountIncrements();
+            compMarks();
+            turnCountIncrements();
+            getWinner();
+        }
+        rightTop.onclick = () => {
+            humMarks(rightTop);
+            turnCountIncrements();
+            compMarks();
+            turnCountIncrements();
+            getWinner();
+        }
+        rightMid.onclick = () => {
+            humMarks(rightMid);
+            turnCountIncrements();
+            compMarks();
+            turnCountIncrements();
+            getWinner();
+        }
+        rightBot.onclick = () => {
+            humMarks(rightBot);
+            turnCountIncrements();
+            compMarks();
+            turnCountIncrements();
+            getWinner();
+        }
+        
     } else if (whoStarts === 'human') {
-        if (turnCount % 2 === 0) {
-            leftTop.onclick = () => {
-                humMarks(leftTop);
-                turnCountIncrements();
-                compMarks();
-                turnCountIncrements();
-                getWinner();
-            } 
-            leftMid.onclick = () => {
-                humMarks(leftMid);
-                turnCountIncrements();
-                compMarks();
-                turnCountIncrements();
-                getWinner();
-            }
-            leftBot.onclick = () => {
-                humMarks(leftBot);
-                turnCountIncrements();
-                compMarks();
-                turnCountIncrements();
-                getWinner();
-            }
-            centerTop.onclick = () => {
-                humMarks(centerTop);
-                turnCountIncrements();
-                compMarks();
-                turnCountIncrements();
-                getWinner();
-            }
-            centerMid.onclick = () => {
-                humMarks(centerMid);
-                turnCountIncrements();
-                compMarks();
-                turnCountIncrements();
-                getWinner();
-            }
-            centerBot.onclick = () => {
-                humMarks(centerBot);
-                turnCountIncrements();
-                compMarks();
-                turnCountIncrements();
-                getWinner();
-            }
-            rightTop.onclick = () => {
-                humMarks(rightTop);
-                turnCountIncrements();
-                compMarks();
-                turnCountIncrements();
-                getWinner();
-            }
-            rightMid.onclick = () => {
-                humMarks(rightMid);
-                turnCountIncrements();
-                compMarks();
-                turnCountIncrements();
-                getWinner();
-            }
-            rightBot.onclick = () => {
-                humMarks(rightBot);
-                turnCountIncrements();
-                compMarks();
-                turnCountIncrements();
-                getWinner();
-            }
-        } else {
+
+        leftTop.onclick = () => {
+            humMarks(leftTop);
+            turnCountIncrements();
+            compMarks();
+            turnCountIncrements();
+            getWinner();
+        } 
+        leftMid.onclick = () => {
+            humMarks(leftMid);
+            turnCountIncrements();
             compMarks();
             turnCountIncrements();
             getWinner();
         }
+        leftBot.onclick = () => {
+            humMarks(leftBot);
+            turnCountIncrements();
+            compMarks();
+            turnCountIncrements();
+            getWinner();
+        }
+        centerTop.onclick = () => {
+            humMarks(centerTop);
+            turnCountIncrements();
+            compMarks();
+            turnCountIncrements();
+            getWinner();
+        }
+        centerMid.onclick = () => {
+            humMarks(centerMid);
+            turnCountIncrements();
+            compMarks();
+            turnCountIncrements();
+            getWinner();
+        }
+        centerBot.onclick = () => {
+            humMarks(centerBot);
+            turnCountIncrements();
+            compMarks();
+            turnCountIncrements();
+            getWinner();
+        }
+        rightTop.onclick = () => {
+            humMarks(rightTop);
+            turnCountIncrements();
+            compMarks();
+            turnCountIncrements();
+            getWinner();
+        }
+        rightMid.onclick = () => {
+            humMarks(rightMid);
+            turnCountIncrements();
+            compMarks();
+            turnCountIncrements();
+            getWinner();
+        }
+        rightBot.onclick = () => {
+            humMarks(rightBot);
+            turnCountIncrements();
+            compMarks();
+            turnCountIncrements();
+            getWinner();
+        }
+
     } else {
         console.log('gameRun() bug');
     }
@@ -396,4 +392,4 @@ const gameRun = () => {
 
 
 //Messages for future me
-console.log('Message for the future me: (1) I have to run gameRun() twice ehen computer starts in order for human to be able to make a turn; (2) Computer keeps playing even after the winner is chosen,;');
+console.log('Message for the future me: (1) Computer keeps playing even after the winner is chosen,;');
