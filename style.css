@@ -103,17 +103,13 @@ div.box {
     border: 1px solid #9E763A;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-content: center;
 }
 
 p.marked {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding-top: 0.45rem;
+    margin: auto;
     font-family: 'Varela Round', sans-serif;
-    font-size: 3rem;
-    text-align: center;
+    font-size: 12vh;
 }
 
 div.box:hover {
